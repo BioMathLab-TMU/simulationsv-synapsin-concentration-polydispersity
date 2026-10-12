@@ -1,0 +1,71 @@
+{
+  "geometry": {
+    "canonical_volume_nm3": 100000000.0,
+    "canonical_shape": "sphere",
+    "shape_codes": {
+      "cube": 0,
+      "sphere": 2,
+      "hemisphere": 3,
+      "cylinder_height_equals_diameter": 4
+    }
+  },
+  "vesicle": {
+    "mean_core_radius_nm": 20.45,
+    "std_core_radius_nm": 2.5,
+    "core_radius_min_nm": 15.0,
+    "core_radius_max_nm": 30.0,
+    "corona_thickness_nm": 4.8,
+    "surface_potential_mV": -22.5
+  },
+  "synapsin": {
+    "effective_radius_nm": 3.972,
+    "surface_potential_mV": 16.0
+  },
+  "population": {
+    "canonical_vesicle_count": 200,
+    "canonical_synapsin_count": 602
+  },
+  "physical_environment": {
+    "temperature_K": 310.15,
+    "viscosity_Pa_s": 0.35,
+    "ionic_strength_M": 0.15,
+    "relative_permittivity": 74.2
+  },
+  "contact_and_overlap": {
+    "core_allowed_overlap_nm": 0.5,
+    "dynamic_steric_penalty_enabled": false,
+    "overlap_projection_max_iterations": 128,
+    "projection_residual_tolerance_nm": 0.005
+  },
+  "numerics": {
+    "candidate_time_step_ms": 0.0007,
+    "integrator": "euler_maruyama",
+    "drift_limit_fraction_of_outer_radius": 0.25
+  },
+  "analysis_observables": {
+    "connectivity_shell_nm_provisional": 2.0
+  },
+  "linked_cells": {
+    "analysis_surface_shell_nm": 6.0,
+    "neighbor_depth_cells": 2,
+    "radial_force_cutoff_nm": null
+  },
+  "schema_version": 1,
+  "force_model": {
+    "electrostatic": {
+      "enabled": true
+    },
+    "hydrophobic": {
+      "enabled": true,
+      "decay_length_nm": 0.5,
+      "contact_energy_syn_syn_kbt_prior": 1.5,
+      "contact_energy_syn_ves_kbt_prior": 1.0,
+      "contact_energy_ves_ves_kbt": 0.0
+    },
+    "van_der_waals": {
+      "enabled_in_article_configs": true,
+      "hamaker_constant_J": 5e-21,
+      "minimum_surface_separation_nm": 0.3
+    }
+  }
+}

@@ -1,0 +1,17 @@
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.cff text eol=lf
+*.txt text eol=lf
+*.h5 binary
+*.pdf binary
+*.png binary
+
+# Preserve manuscript and archival attachment bytes and their recorded checksums.
+manuscript/** -text
+draft_history/** -text
+attachments/** -text

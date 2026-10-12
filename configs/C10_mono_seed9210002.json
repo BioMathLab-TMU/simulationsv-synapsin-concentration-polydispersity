@@ -1,0 +1,149 @@
+{
+  "connectivity": [
+    {
+      "Synapsin–Synapsin": 10.0,
+      "Synapsin–Vesicle": 28.0,
+      "Vesicle-Synapsin": 28.0,
+      "Vesicle–Vesicle": 46.0
+    }
+  ],
+  "environment": [
+    {
+      "Neibor": 1,
+      "NeighborLevels": [
+        "PRIMARY",
+        "SECONDARY"
+      ],
+      "NeighborTypes": [
+        "MAIN",
+        "SUB"
+      ],
+      "Shapes": [
+        "CUBE",
+        "DATA",
+        "SPHERE",
+        "HEMISPHERE",
+        "CYLINDER"
+      ],
+      "box_fract": 1.0,
+      "height": 575.882382296972,
+      "labels": [
+        -2,
+        -1
+      ],
+      "length": 575.882382296972,
+      "levelNei": 1,
+      "out": 2,
+      "scale": 1.0,
+      "shape": 2,
+      "slide": 576,
+      "steps": [
+        71.9852977871215,
+        71.9852977871215,
+        71.9852977871215
+      ],
+      "volume": 100000000.0,
+      "width": 575.882382296972,
+      "analysis_surface_shell_nm": 6.0,
+      "boundary_condition": "closed_reflecting_no_flux",
+      "cell_size_policy": "supremum_outer_vesicle_diameter"
+    }
+  ],
+  "forces_parms": [
+    {
+      "adjusted_max": 1.0,
+      "connectivity_shell_nm": 2.0,
+      "core_allowed_overlap_nm": 0.5,
+      "core_energy_kbt": 10.0,
+      "enable_electrostatic": true,
+      "enable_hydrophobic": true,
+      "enable_dynamic_steric_penalty": false,
+      "enable_drift_component_diagnostics": true,
+      "enable_overlap_projection": true,
+      "enable_van_der_waals": true,
+      "continuous_contact_forces": false,
+      "dynamic_drift_limit_fraction_of_radius": 0.25,
+      "hydrophobic_decay_length_nm": 0.5,
+      "hydrophobic_energy_syn_syn_kbt": 1.5,
+      "hydrophobic_energy_syn_ves_kbt": 1.0,
+      "hydrophobic_energy_ves_ves_kbt": 0.0,
+      "minimum_surface_separation_nm": 0.3,
+      "overlap_projection_max_iterations": 128,
+      "overlap_projection_residual_tolerance_nm": 0.005
+    }
+  ],
+  "parameters": [
+    {
+      "boltzmann": 1.0000000000000002,
+      "dimension": 3,
+      "electronic": 1.0,
+      "eta": 0.025350396806139718,
+      "hamaker": 362.148525801996,
+      "ionic_strength_molar": 0.15,
+      "debye_length_nm": 0.7788563757123577,
+      "kappa_nm_inverse": 1.283933766460318,
+      "permittivity": 4.763188588390603e-06,
+      "solvent_relative_permittivity": 74.2,
+      "temperature": 310.15
+    }
+  ],
+  "pre_test": [
+    {
+      "centering": 0,
+      "dataAnalysis": true,
+      "f_off": false
+    }
+  ],
+  "synapsinI": [
+    {
+      "D_syn": 1.0,
+      "drag_syn": 1.0,
+      "num": 602,
+      "radius": 3.972,
+      "surface_potential_mV": 16.0
+    }
+  ],
+  "times": [
+    {
+      "Ttime": 40001,
+      "integrator": "euler_maruyama",
+      "loop_minimiz": 200,
+      "minimizer_consecutive_checks": 3,
+      "minimizer_overlap_tolerance_nm": 0.05,
+      "time_step": 0.0007
+    }
+  ],
+  "total": [
+    {
+      "actual_seed": null,
+      "address": "C10_mono_seed9210002",
+      "continue": false,
+      "load": 200,
+      "log": false,
+      "outputMode": [
+        "Console",
+        "LogFile"
+      ],
+      "save_forces": true,
+      "seed": 9210002,
+      "resume_mode": "recovery",
+      "resume_source": "",
+      "use_seed": true
+    }
+  ],
+  "vesicles": [
+    {
+      "D_ves": 1.0,
+      "drag_ves": 1.0,
+      "mean_radius": 20.45,
+      "mean_core_radius_nm": 20.45,
+      "num": 200,
+      "std_radius": 0.0,
+      "std_core_radius_nm": 0.0,
+      "core_radius_min_nm": 15.0,
+      "core_radius_max_nm": 30.0,
+      "corona_thickness_nm": 4.8,
+      "surface_potential_mV": -22.5
+    }
+  ]
+}

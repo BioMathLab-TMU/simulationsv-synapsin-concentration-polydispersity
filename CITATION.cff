@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying article when published; until then cite this dataset and code repository."
+title: "Synapsin concentration and vesicle-size polydispersity: simulation data and analysis code"
+type: software
+authors:
+  - family-names: Akbari
+    given-names: Shokoofeh
+    email: shokoofe.akbari1997@gmail.com
+  - family-names: Jamali
+    given-names: Yousef
+repository-code: "https://github.com/shokoofe-akbari/simulationsv-synapsin-concentration-polydispersity"
+version: "1.0.0"
+date-released: 2026-09-30

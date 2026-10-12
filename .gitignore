@@ -1,0 +1,19 @@
+/build/
+/builds/
+/outputs/
+/.venv/
+/__pycache__/
+*.pyc
+*.log
+*.tmp
+.idea/
+cmake-build-*/
+
+# Rebuildable LaTeX auxiliaries; manuscript PDF and sources remain tracked.
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.blg
+__pycache__/
