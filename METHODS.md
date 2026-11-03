@@ -47,6 +47,26 @@ radial synapsin-minus-vesicle core–shell index (scaled by gyration radius),
 and type assortativity within mixed components. The code contains exact
 definitions and handles missing/undefined component statistics explicitly.
 
+## Vesicle-associated local synapsin concentration
+
+The operational probe is centered on each vesicle in a mixed synapsin-vesicle
+component of the primary 2-nm graph, provided its entire ball lies inside
+the spherical compartment. All synapsin centers inside that ball are counted,
+including synapsin agents outside the vesicle's graph component. At probe
+radius *a* nm, the number concentration in micromolar is
+`n x 10^30 / [N_A x (4 pi a^3/3)]`, where *n* is the counted synapsin number
+and `N_A = 6.02214076 x 10^23 mol^-1`. The code averages vesicle values
+within each of the final 60 frames, frame values within each run, and the
+two radius-design arms within each seed block. The reported mean and range
+use the three seed-block values. At 50 nm, the mean is 17.7 micromolar at
+10-micromolar imposed bulk concentration and 171.4 micromolar at
+60-micromolar imposed bulk concentration. The 35- and 70-nm results document
+probe-scale dependence. This is a vesicle-centered spatial concentration,
+not a measured coexistence-phase concentration or an independent replicate
+per vesicle or frame. Reproduce it with
+`python -m analysis.cluster_local_concentration` and compare the output
+with `reference/cluster_local_concentration.csv`.
+
 ## Density, RDF, and uncertainty
 
 Interior-probe local number density is computed on six selected late frames

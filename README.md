@@ -27,8 +27,8 @@ every included run; this dataset does not isolate their effects.
 | [`STATISTICAL_DECISIONS.md`](STATISTICAL_DECISIONS.md) | Audit of additional small-sample statistical suggestions |
 | [`THIRD_PARTY.md`](THIRD_PARTY.md) | Notices for the vendored C++ headers |
 
-The private parent repository, manuscript drafts, personal paths, and other
-study matrices are **not included**. The public HDF5 files omit private Git/
+The private parent repository, manuscript drafts, cover letters, personal paths,
+and other study matrices are **not included**. The public HDF5 files omit private Git/
 workstation provenance and article-irrelevant per-particle force-decomposition
 and pairwise-diagnostic arrays. The complete originals remain in the private
 project. Every **exported** dataset was compared to its original for name,
@@ -44,6 +44,7 @@ Use Python 3.12. Create a virtual environment, install
 ```bash
 python -m analysis.run --manifest-only
 python -m analysis.run
+python -m analysis.cluster_local_concentration
 python -m analysis.inference_checks
 python -m analysis.paper_figures
 python -m analysis.plots
@@ -56,7 +57,12 @@ interior-probe local density, finite-geometry-null RDF, seed-paired contrasts,
 blocked HC3 factorial estimates, Holm-adjusted planned contrasts, and
 exploratory ML. It compares the recomputed metrics against
 `reference/`; all generated tables and an audit JSON go to ignored `outputs/`.
-The third command enumerates all eight concentration-label remappings that
+The local-concentration command checks the 12 published HDF5 and configuration
+hashes, analyzes the final 60 frames, and writes
+`outputs/cluster_local_concentration.csv`. Its frozen checked result is
+`reference/cluster_local_concentration.csv`. This vesicle-centered measure
+is distinct from a thermodynamic phase concentration.
+The next command enumerates all eight concentration-label remappings that
 keep each seed block's two radius arms together, and checks the first saved
 window. The fourth regenerates all nine publication figures in three formats in
 `figures/` using the archived `Single_Execution` palette; this changes
